@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мини-Азерот: Путь героя</title>
+    
+    <!-- Telegram Web App SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Шрифты Google (WoW-стиль) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Мини-Азерот: Путь героя</h1>
+
+        <div id="playerInfo">
+            <img id="playerAvatar" src="assets/default-avatar.png" alt="Аватар">
+            <div>
+                <div id="playerName">Герой Азерота</div>
+                <div>Уровень <span id="level">1</span></div>
+            </div>
+        </div>
+
+        <div id="stats">
+            <div class="stat">Золото: <span id="gold">0</span> 💰</div>
+            <div class="stat">Урон за клик: <span id="damage">1</span> ⚔️</div>
+            <div class="stat">Автоурон: <span id="autoDamage">0</span>/сек 🔁</div>
+        </div>
+
+        <div id="quest">
+            <strong>Квест:</strong> Убей <span id="questTarget">10</span> гоблинов<br>
+            Прогресс: <span id="kills">0</span>/<span id="questTarget">10</span>
+        </div>
+
+        <div id="monsterContainer">
+            <img id="monster" src="https://i.imgur.com/5Y0K3Xb.png" alt="Гоблин">
+            <div class="progress-bar">
+                <div id="monsterHealthBar" class="progress-fill"></div>
+            </div>
+            <div class="monster-hp">❤️ <span id="monsterHealthText">50</span></div>
+        </div>
+
+        <div class="shop">
+            <button onclick="buyUpgrade('sword')">Улучшить меч<br><small>50 золота</small></button>
+            <button onclick="buyUpgrade('auto')">Нанять помощника<br><small>200 золота</small></button>
+            <button onclick="shareGame()" class="share-btn">Поделиться ⚔️</button>
+        </div>
+    </div>
+
+    <!-- Подключаем скрипт -->
+    <script src="js/main.js"></script>
+</body>
+</html>
